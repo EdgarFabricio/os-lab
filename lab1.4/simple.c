@@ -1,18 +1,19 @@
 #include <linux/init.h>
 #include <linux/module.h>
 #include <linux/kernel.h>
+#include <linux/sysinfo.h>
 
 /* This function is called when the module is loaded. */
 int simple_init(void)
 {
-       printk(KERN_INFO "Loading Module\n");
-
+	struct sysinfo t_info;
+       printk( "Loading Module\n" +t_info.uptime);
        return 0;
 }
 
 /* This function is called when the module is removed. */
 void simple_exit(void) {
-	printk(KERN_INFO "Removing Module\n");
+	printk( "Removing Module\n");
 }
 
 /* Macros for registering module entry and exit points. */
