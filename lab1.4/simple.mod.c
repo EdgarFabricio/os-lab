@@ -19,6 +19,10 @@ __used
 __attribute__((section("__versions"))) = {
 	{ 0x7d5fac49, __VMLINUX_SYMBOL_STR(module_layout) },
 	{ 0xdb7305a1, __VMLINUX_SYMBOL_STR(__stack_chk_fail) },
+	{ 0xe914e41e, __VMLINUX_SYMBOL_STR(strcpy) },
+	{ 0x1a9ae51a, __VMLINUX_SYMBOL_STR(current_task) },
+	{ 0x37befc70, __VMLINUX_SYMBOL_STR(jiffies_to_msecs) },
+	{ 0x37e74642, __VMLINUX_SYMBOL_STR(get_jiffies_64) },
 	{ 0x50eedeb8, __VMLINUX_SYMBOL_STR(printk) },
 	{ 0xb4390f9a, __VMLINUX_SYMBOL_STR(mcount) },
 };
