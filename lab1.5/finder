@@ -12,7 +12,7 @@ findThem ()
 	printf  "\n -.h source code files\n\t-" >> linux_source_structure.txt
 	for files in $(ls "$1/.")
 	do
-		if [[ $files = .h ]] 
+		if [[ $files = *".h" ]] 
 		then
 			printf "$files\n\t-" >> linux_source_structure.txt
 		fi
