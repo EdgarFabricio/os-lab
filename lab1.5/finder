@@ -1,0 +1,35 @@
+#!/bin/bash
+findThem ()
+{
+	printf " -.c source code files:\n\t-" >> linux_source_structure.txt
+	for files in $(ls "$1/.")
+	do
+		if [[ $files = *".c" ]] 
+		then
+			printf "$files\n\t-" >> linux_source_structure.txt
+		fi
+	done
+	printf " \n -.h source code files:\n\t-" >> linux_source_structure.txt
+	for files in $(ls "$1/.")
+	do
+		if [[ $files = *".h" ]] 
+		then
+			printf "$files\n\t-" >> linux_source_structure.txt
+		fi
+	done
+	for files in $(ls "$1/.")
+	do
+		if test -d "$1/$files"
+		then
+			printf "\n$1/$files\n" >> linux_source_structure.txt
+			findThem "$1/$files"
+		fi
+	done
+}
+
+
+printf "" > linux_source_structure.txt
+echo "Running finder" >> linux_source_structure.txt
+echo "Main directory:" >> linux_source_structure.txt
+echo "/usr/src/linux-source-3.16" >> linux_source_structure.txt
+findThem "/usr/src/linux-source-3.16"
