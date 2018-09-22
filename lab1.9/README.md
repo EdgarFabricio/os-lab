@@ -3,9 +3,11 @@
  This code was compiled with gcc in linux.
   
  To compile:
- 	gcc multiplier.c -o multiplier -lpthread
+
+  gcc multiplier.c -o multiplier -lpthread
  
  To run:
+ 
   ./multiplier NUM_BUFFERS
  
  where NUM_BUFFERS is a parameter that multiplier receives as the number of 
