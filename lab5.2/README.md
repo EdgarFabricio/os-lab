@@ -1,6 +1,6 @@
 # OS-Labs
 This is a virtual memory manager.
-to compile:
+To compile:
 gcc vimema.c -o vimema
-to run:
+To run:
 ./vimema
